@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<ul>
+{% for i in info %}
+<li>
+    <h3>{{ i.function }}</h3>
+    <p>{{ i.name }}<br>
+    {{ i.telephone }}</p>
+    <hr>
+</li>
+{% endfor %}
+</ul>
+{% endblock %}

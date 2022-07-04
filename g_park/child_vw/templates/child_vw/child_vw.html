@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<ul>
+    {% for i in info %}
+    <li>
+        <center>
+            <img src="{% static 'child_vw/2_Аттракцион.jpg' %}" alt="home image" style=200px"><br>
+        </center>
+        <h2>{{ i.title }}</h2>
+        <p>{{ i.content }}</p>
+        <p>{{ i.opening_hours }}</p>
+        <p>{{ i.technical_characteristics }}</p>
+        <p>{{ i.produced }}</p>
+        <hr>
+        <p>{{ record }}</p>
+        <hr>
+        <p>{{ reporting }}</p>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
