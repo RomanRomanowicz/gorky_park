@@ -15,7 +15,20 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.contrib import admin
+from django.urls import path, include
+from p_info.views import *
+from view_wheel.views import *
+from child_vw.views import *
+from doggies.views import *
+from dragon.views import *
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-]
+    path('', include('p_info.urls')),
+    path('', include('view_wheel.urls')),
+    path('', include('child_vw.urls')),
+    path('', include('doggies.urls')),
+    path('', include('dragon.urls')),
+    ]
