@@ -11,6 +11,8 @@ menu = [{'title': "Home", 'url_name': 'home'},
 
 # Create your views here.
 def view_home(request):
+    # user = request.user
+    # print(f"{user.id}, {user.username=}, {user.password=}, {user.anonymous=}")
     info = InfoPark.objects.all()
     sl_home = {'info': info, 'menu': menu, 'title': 'ПАРК ГОРЬКОГО'}
     return render(request, 'p_info/home.html', context=sl_home)
